@@ -1,1 +1,23 @@
+int redLed_1 = 2;
+int blueLed_2 = 4;
+int greenLed_3 = 6;
+int yellowLed_4 = 8;
+
+int buzzer = 6;
+
+
+void setup()
+{
+
+
+
+}
+
+
+void loop()
+{
+
+
+
+}
 
