@@ -60,7 +60,8 @@ void loop()
     digitalWrite(10,LOW);
     Bclick = LOW;
 
-  }
+  } 
+  delay(5)
 
 
   if (b1state == 0)
