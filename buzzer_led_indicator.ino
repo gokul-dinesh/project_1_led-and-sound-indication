@@ -61,7 +61,7 @@ void loop()
     Bclick = LOW;
 
   }
-  delay(500);
+
 
   if (b1state == 0)
   {
