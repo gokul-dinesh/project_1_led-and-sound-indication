@@ -20,9 +20,9 @@ Then declare boolean b1state,b2state,b3state,b4state,b5state = 0 [These are the 
 
 [Buzzzer Function]
 Create a fuction void buzzer()
-	Under this fuction first we will give high out put at pin 12 where buzzer is present using digitalwire function
+	Under this fuction first we will give high out put at pin 12 where buzzer is present using digitalwrite function
 	Set tone with required Frequency
-	Now switch of the buzzer usiing digital wire function or notone function
+	Now switch of the buzzer usiing digitalwrire function or notone function
 And close this function.
 
 
@@ -51,29 +51,29 @@ Next step after setup is create the actual function called void loop.[where 4 di
 				
 				[Code for person-1 clicking button]
 				If b2state is equal to 1 also Bclick equal to LOW
-					Then Keep the first LED at pin 4 as high and rest low along with other push buttons using digitalwire function.
-					Induce Buzzer function that was created before and delay for 2000ms.
+					Then Keep the first LED at pin 4 as high and rest low along with other push buttons using digitalwrite function.
+					Induce Buzzer function that was created before and delay for 3000ms.
 					While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again 
 
 
 				[Code for person-2 clicking button]
 				If b3state is equal to 1 also Bclick equal to LOW
-					Then Keep the second LED at pin 6 as high and rest low along with other push buttons using digitalwire function.
-					Induce Buzzer function that was created before and delay for 2000ms.
+					Then Keep the second LED at pin 6 as high and rest low along with other push buttons using digitalwrite function.
+					Induce Buzzer function that was created before and delay for 3000ms.
 					While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again. 
       
 
     				[Code for person-3 clicking button]
 				If b4state is equal to 1 also Bclick equal to LOW
-					Then Keep the third LED at pin 8 as high and rest low along with other push buttons using digitalwire function
-					Induce Buzzer function that was created before and delay for 2000ms.
+					Then Keep the third LED at pin 8 as high and rest low along with other push buttons using digitalwrite function
+					Induce Buzzer function that was created before and delay for 3000ms.
 					While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again. 
 
 
 				[Code for person-4 clicking button]
 				If b5state is equal to 1 also Bclick equal to LOW
-					Then Keep the fourth LED at pin 10 as high and rest low along with other push buttons using digitalwire function.
-					Induce Buzzer function that was created before and delay for 2000ms.
+					Then Keep the fourth LED at pin 10 as high and rest low along with other push buttons using digitalwrite function.
+					Induce Buzzer function that was created before and delay for 3000ms.
 					While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again.
 
 Use Serial.flush and cloose the function.
