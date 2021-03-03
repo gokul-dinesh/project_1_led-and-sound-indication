@@ -76,7 +76,7 @@ Next step after setup is create the actual function called void loop.[where 4 di
 					Induce Buzzer function that was created before and delay for 3000ms.
 					While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again.
 
-Use Serial.flush and cloose the function.
+Use Serial.flush and close the function.
 
 End 
 
