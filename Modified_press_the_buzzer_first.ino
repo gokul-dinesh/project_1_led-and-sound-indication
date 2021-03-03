@@ -1,4 +1,5 @@
 // Atlernative shorter code 
+
 boolean  ResetStatus=false;
 boolean Bclick=LOW;
 
