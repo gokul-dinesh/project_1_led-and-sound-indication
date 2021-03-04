@@ -1,0 +1,100 @@
+Appartus Used (Virtual or TINKERCAD)
+1.Breadboard
+2.Resistors
+3.Push Buttons(5)
+4.LEDs(5)
+5.Buzzer(Piezo Buzzer)
+6.Arduino
+
+
+
+
+Algorithm Used For Modified (alternate) code:
+
+Start
+ 
+First declare boolean  ResetStatus=false and boolean Bclick=LOW
+
+Then declare boolean b1state,b2state,b3state,b4state,b5state = 0 [These are the states of the push button which is preset to 0]
+
+
+[Buzzzer Function]
+Create a fuction void buzzer()
+	Under this fuction first we will give high out put at pin 12 where buzzer is present using digitalwrite function
+	Set tone with required Frequency
+	Now switch of the buzzer usiing digitalwrite function or notone function
+And close this function.
+
+
+[Setup Function]
+Now create a fuction void setup().This function will be used to setup a particular mode as input and output using pinmode() function along with serial.begin like in this case pins 3,5,7,9,11 are kept as INPUT and  pins 2,4,6,8,10,12 are kept as OUTPUT.For example pinMode(3,INPUT);
+And then close this function.
+
+
+[Button_State Fuction which will accordingly switch on the LED and the buzzer as the push button is switched on]
+Create a function called button_state() with parameters two integer x and y which will be the pin number of LED and push button respectively
+	Now using digitalwrite function put the out put in x mode to high. For example digitalwrite(x,HIGH).
+	
+	run a for loop initializing intger i=x and having condition such as i<=11 and i is increasing by the value of 1 after execution of loop one time. 
+  		if i equal to x
+			Then use digitalWrite function to keep i output high.For example like digitalwrite(i,HIGH).	
+    		if i equal to y
+			continue
+    		if i not equal to x along with that i is also not equal to y
+			Then use digitalWrite function to keep i output LOW.For example like digitalwrite(i,LOW).
+		
+  
+  	Induce Buzzer function that was created before and delay for 3000ms.
+	While push button at pin 3 is high keep ResetStatus true and Bclick high to prevent others to use the push buttton again.
+
+Close this function
+
+	 
+[Main Function]
+Next step after creating button_state function is to create the actual function called void loop.[where 4 different people will control the buzzer and respective LEDs like in a quiz competition]
+	
+	In the void loop function first use digitalread function on all push buttons to know the current status of thepush button.
+		If the b1state (i.e is reset button) has a boolean state of 1 .
+			Then ammend ResetStatus equal to true.
+			Switch on the reset indicator LED using digitalwrite Function and give a delay of 2s.
+			Also switch off other LEDs and keep Bclick equal to using digitalwrite function.Give a minimal delay approximately 5ms.
+		
+		Now if the b1state has a boolean state of 0 .
+			Then ammend ResetStatus equal to false and keep the reset indicator LED off using digitalwrite funtion.
+  		
+		
+		And now if the ResetStatus is equal to False 
+			Use the fuction digitalread to read the state of rest 4 LEDs
+
+			[After reading the different states of 4 LEDs.Now we will code for differnt person]
+				
+				[Code for person-1 clicking button]
+				Call button_state Function with paramters 4 and 5. For example- button_state(4,5).
+
+				[Code for person-2 clicking button]
+				Call button_state Function with paramters 6 and 7. For example- button_state(6,7).      
+
+    				[Code for person-3 clicking button]
+				Call button_state Function with paramters 8 and 9. For example- button_state(8,9).
+
+				[Code for person-4 clicking button]
+				Call button_state Function with paramters 10 and 11. For example- button_state(10,11).
+
+				
+Use Serial.flush and close the function.
+
+End 
+
+
+
+References:
+1.Google and many websites(www.arduino.cc,etc)
+2.Youtube 
+3.Seniors to clarify doubts     
+
+
+
+Project Done By:-
+Harshil
+Tejas Rote
+Gokul Dinesh
