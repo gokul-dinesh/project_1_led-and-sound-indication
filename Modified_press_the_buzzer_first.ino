@@ -37,7 +37,7 @@ void button_state(int x, int y)
   {
     if(i==x){digitalWrite(i,HIGH);}
     if(i==y){continue;}
-    if(i!=x && i!=7){digitalWrite(i,LOW);}
+    if(i!=x && i!=y){digitalWrite(i,LOW);}
   }
   buzzer();
   delay(3000);
